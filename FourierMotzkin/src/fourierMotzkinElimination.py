@@ -46,7 +46,10 @@ def rescaleData(data, var):
 	Output:
 	matrix - new matrix D and vector d
 	"""
-	pass
+	for i in range(data.shape[0]):
+		if data[i,var]:
+			data[i,:] = data[i,:] / np.abs(data[i,var])
+	return data
 	
 def deleteRedundantRows():
 	pass
