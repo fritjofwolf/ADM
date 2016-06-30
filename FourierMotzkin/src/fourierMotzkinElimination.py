@@ -31,7 +31,7 @@ def computeFMElimination(data, var):
 		
 	for i in N:
 		for j in P:
-			 D[cnt,:] = data[j,var]*data[i,:] - data[i,var]*data[j,:]
+			 D[cnt,:] = data[i,:] + data[j,:]
 			 cnt += 1
 	sindizes = range(data.shape[1])
 	sindizes.remove(var)
